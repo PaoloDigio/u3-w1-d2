@@ -9,8 +9,18 @@ class SingleBook extends Component {
 
   render() {
     return (
-      <Card className="h-100">
-        <Card.Img variant="top" src={this.props.book.img} alt="img" style={{ height: "60%" }} />
+      <Card className="h-100" style={{ border: this.state.selected ? "2px solid yellow" : "1px solid white" }}>
+        <Card.Img
+          variant="top"
+          src={this.props.book.img}
+          alt="img"
+          style={{ height: "60%" }}
+          onClick={() => {
+            this.setState({
+              selected: !this.state.selected,
+            });
+          }}
+        />
         <Card.Body className="d-flex flex-column justify-content-between" style={{ height: "40%" }}>
           <div className="overflow-auto">
             <Card.Title>{this.props.book.title}</Card.Title>
