@@ -9,9 +9,9 @@ const AllTheBooks = function () {
   return (
     <Container className="py-5">
       <Row className="g-3">
-        {items.map((book, i) => {
+        {items.map((book) => {
           return (
-            <Col xs={6} md={4} lg={3} key={i}>
+            <Col xs={6} md={4} lg={3} key={book.asin}>
               <Card className="h-100">
                 <Card.Img variant="top" src={book.img} alt="img" style={{ height: "60%" }} />
                 <Card.Body className="d-flex flex-column justify-content-between" style={{ height: "40%" }}>

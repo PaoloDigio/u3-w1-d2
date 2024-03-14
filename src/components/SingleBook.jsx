@@ -1,5 +1,6 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import CommentArea from "./CommentArea";
 import { Component } from "react";
 
 class SingleBook extends Component {
@@ -29,6 +30,7 @@ class SingleBook extends Component {
             <Card.Text>€ {this.props.book.price.toFixed(2)}</Card.Text>
             <Button variant="primary">Compra ora!</Button>
           </div>
+          <CommentArea selected={this.state.selected} />
         </Card.Body>
       </Card>
     );
